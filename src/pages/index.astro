@@ -1,16 +1,11 @@
 ---
-
+import Layout from "../layouts/Layout.astro";
+import Chat from "../components/Chat";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout title="WebLLM Chat">
+	<main class="container mx-auto p-2 h-screen flex flex-col">
+		<h1 class="text-2xl font-bold mb-2">WebLLM Chat with Qwen-2.5-1.5B-Instruct</h1>
+		<Chat client:load />
+	</main>
+</Layout>
